@@ -1,16 +1,17 @@
 package com.example.coursework3.services;
 
 import com.example.coursework3.modules.Sock;
+import org.springframework.stereotype.Service;
 
-import java.util.Map;
+import java.util.Set;
 
+@Service
 public interface SockService {
     void addSocks(Sock sock);
-    Sock getSocks(Integer num);
 
-    Map<Integer, Sock> getAllSocks();
+    void sellSocks(Sock sock);
 
-    void changeSock(Integer num, Sock sock);
+    Integer getNumberOfSocks(Sock sock);
 
-    void deleteSock(Integer num);
+    void deleteSock(Sock sock);
 }
